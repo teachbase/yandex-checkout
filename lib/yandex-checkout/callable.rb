@@ -3,7 +3,7 @@
 module YandexCheckout
   module Callable
     def call(*args)
-      new(*args)
+      new(**args)
     end
     alias [] call
   end
