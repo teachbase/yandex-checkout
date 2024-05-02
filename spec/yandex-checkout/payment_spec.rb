@@ -3,7 +3,7 @@
 RSpec.describe YandexCheckout::Payment do
   let(:settings) { { shop_id: 'SHOP_ID', api_key: 'API_KEY' } }
   let(:idempotency_key) { 12_345 }
-  let(:payment) { described_class.new(settings) }
+  let(:payment) { described_class.new(**settings) }
 
   shared_examples 'returns_payment_object' do
     it 'returns success' do

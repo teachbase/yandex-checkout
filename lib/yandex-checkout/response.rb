@@ -13,7 +13,7 @@ module YandexCheckout
       end
 
       def new(opts)
-        super opts.each_with_object({}) { |(key, val), obj| obj[key.to_sym] = val }
+        super(**opts.each_with_object({}) { |(key, val), obj| obj[key.to_sym] = val })
       end
     end
   end
